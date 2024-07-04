@@ -1,0 +1,11 @@
+# Dockerfile
+FROM ubuntu:20.10
+RUN apt-get update
+RUN apt-get install -y tcpdump
+# Create user
+ARG USER=test
+ARG PASS="test"
+RUN useradd -m -s /bin/bash $USER && echo "$USER:$PASS" | chpasswd
+# Install SSH
+RUN apt-get install -y openssh-client openssh-server
+
