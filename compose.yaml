@@ -1,6 +1,6 @@
 
 services:  
-  C1:
+  c1:
     build:
       context: ./c1/
     container_name: c1
@@ -9,7 +9,7 @@ services:
     networks:
       - mynet
 
-  C2:
+  c2:
     build:
       context: ./c2/
     container_name: c2
@@ -18,7 +18,7 @@ services:
     networks:
       - mynet
     
-  C3:
+  c3:
     build:
       context: ./c3/
     container_name: c3
@@ -27,9 +27,9 @@ services:
     networks:
       - mynet
 
-  C4:
+  c4s1:
     build:
-      context: ./c4/
+      context: ./c4s1/
     container_name: c4s1
     tty: true
     stdin_open: true
