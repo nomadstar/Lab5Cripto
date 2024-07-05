@@ -1,0 +1,43 @@
+services:
+  c1:
+    build:
+      context: .
+      dockerfile: superimage.dockerfile
+      args:
+        - version=16.10
+        - connumber=1
+    container_name: c1
+    tty: true
+    stdin_open: true
+  c2:
+    build:
+      context: .
+      dockerfile: superimage.dockerfile
+      args:
+        - version=18.10
+        - connumber=2
+    container_name: c2
+    tty: true
+    stdin_open: true
+  c3:
+    build:
+      context: .
+      dockerfile: superimage.dockerfile
+      args:
+        - version=20.10
+        - connumber=3
+    container_name: c3
+    tty: true
+    stdin_open: true
+  c4s1:
+    build:
+      context: .
+      dockerfile: superimage.dockerfile
+      args:
+        - version=22.10
+        - connumber=4
+    container_name: c4s1
+    tty: true
+    stdin_open: true
+
+
