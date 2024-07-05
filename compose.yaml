@@ -36,5 +36,10 @@ services:
     volumes:
       - ./server.sh:/server.sh
     command: "sh /server.sh"
-    
 
+networks:
+  default:
+    driver: bridge
+    driver_opts:
+      com.docker.network.bridge.name: lab5
+      
