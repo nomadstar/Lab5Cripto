@@ -21,3 +21,7 @@ ssh prueba@c4s1
 ```
 Donde prueba es el usuario y c4s1 nombre del servidor a conectarte.
 Te pedirá la clave ¿no sabes donde está? Buscala! Así entenderás que hace el codigo :D
+
+# Datos Importantes
+
+[Que hay en OpenSSH?](https://www.openssh.com/legacy.html)
