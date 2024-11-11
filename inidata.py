@@ -1,5 +1,5 @@
 # Para efectos de copatibilidad con ambos algoritmos se trabajara con bloques de 128 bits siempre
-import sys
+import sys, pycryptodome
 class fowardData:
     requiredvalues = {
         "algoritmo": str,
@@ -24,7 +24,6 @@ if __name__ == "__main__":
     data = fowardData()
     required = {"algoritmo", "tamañobloque", "padding", "texto", "key"}
     data.initialize(required)
-    
     print(data.requiredvalues)
     input("Presione enter para continuar... de lo contrario presione ")
 
