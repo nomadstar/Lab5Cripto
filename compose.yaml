@@ -35,7 +35,7 @@ services:
     container_name: c4s1
     volumes:
       - ./server.sh:/server.sh
-    command: "sh /server.sh"
+    command: ["sh", "/server.sh", "true"] # h=false para modo normal
 
 networks:
   default:

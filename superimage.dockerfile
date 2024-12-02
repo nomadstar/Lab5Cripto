@@ -5,3 +5,4 @@ RUN perl -pi -e 's/^Prompt=.*/Prompt=normal/' /etc/update-manager/release-upgrad
 RUN apt-get update && apt-get upgrade -y
 RUN apt-get install -y openssh-client
 
+

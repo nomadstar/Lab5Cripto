@@ -1,6 +1,18 @@
-apt-get install -y openssh-server
 USER=prueba
 PASS='prueba'
 useradd -m -s /bin/bash $USER && echo "$USER:$PASS" | chpasswd
+
+if [ "$1" = true ]; then
+    apt-get install -y wget g++ make zlib1g-dev libssl-dev
+    wget https://cdn.openbsd.org/pub/OpenBSD/OpenSSH/portable/openssh-9.0p1.tar.gz && \
+        tar -xzf openssh-9.0p1.tar.gz
+    cd openssh-9.0p1 && \
+        sed -i 's/^#define SSH_VERSION.*/#define SSH_VERSION "OpenSSH_?"/' version.h && \
+        ./configure && \
+        make && \
+        make install
+else
+    apt-get install -y openssh-server
+fi
+
 tail -f /dev/null
-# escribe service ssh start para partir (el archivo no lo hace porque, para que tan flojo?)
