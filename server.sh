@@ -1,4 +1,4 @@
-apt-get install -y openssh-server
+apt-get install -y openssh-server 
 USER=prueba
 PASS='prueba'
 useradd -m -s /bin/bash $USER && echo "$USER:$PASS" | chpasswd
@@ -16,6 +16,5 @@ if [ "$1" = true ]; then
     sleep 5
     make install
 fi
-
 
 tail -f /dev/null

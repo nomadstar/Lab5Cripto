@@ -33,9 +33,11 @@ services:
       args:
         - version=22.10
     container_name: c4s1
+    tty: true
+    stdin_open: true
     volumes:
       - ./server.sh:/server.sh
-    command: ["sh", "/server.sh", "true"] # h=false para modo normal
+    command: "sh server.sh true" # h=false para modo normal
 
 networks:
   default:
